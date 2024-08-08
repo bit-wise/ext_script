@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Examples</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="ExtMath.js"></script>
+    <script>
+        const sampleSize = 1000000;
+    </script>
+</head>
+
+<body>
+    <h1>Examples</h1>
+
+    <div id="posmod">
+        <h2>posmod</h2>
+    </div>
+    <script>
+        $("#posmod").append("<p>posmod(-13, 5) = " + ExtMath.posmod(-13, 5) + "</p>");
+        $("#posmod").append("<p>posmod(-13, -5) = " + ExtMath.posmod(-13, -5) + "</p>");
+        $("#posmod").append("<p>posmod(13, -5) = " + ExtMath.posmod(13, -5) + "</p>");
+        $("#posmod").append("<p>posmod(13, 5) = " + ExtMath.posmod(13, 5) + "</p>");
+    </script>
+
+    <div id="iposmod">
+        <h2>iposmod</h2>
+    </div>
+    <script>
+        $("#iposmod").append("<p>iposmod(13, -5) = " + ExtMath.iposmod(13, -5) + "</p>");
+    </script>
+
+    <div id="harmonic">
+        <h2>harmonic (divergent series)</h2>
+        <p>1 + 1/2 + 1/3 + 1/4 + 1/5 ...</p>
+    </div>
+    <script>
+        $("#harmonic").append("<p>harmonic(" + sampleSize + ") = " + ExtMath.harmonic(sampleSize) + "</p>");
+    </script>
+
+    <div id="aharmonic">
+        <h2>aharmonic (alternating/convergent series)</h2>
+        <p>1 - 1/2 + 1/3 - 1/4 + 1/5 ...</p>
+    </div>
+    <script>
+        $("#aharmonic").append("<p>aharmonic(" + sampleSize + ") = " + ExtMath.aharmonic(sampleSize) + "</p>");
+    </script>
+</body>
+
+
+</html>
